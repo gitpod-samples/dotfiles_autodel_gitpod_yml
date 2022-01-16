@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-set -eux;
+set -eu;
 
 _file=".gitpod.yml";
 _times=0;
