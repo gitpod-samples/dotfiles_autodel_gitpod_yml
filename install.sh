@@ -1,6 +1,4 @@
-#!/usr/bin/bash
-
-set -eu;
+#!/usr/bin/bash -eu;
 
 _file=".gitpod.yml";
 _times=0;
