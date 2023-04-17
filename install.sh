@@ -1,6 +1,6 @@
 #!/usr/bin/bash -eu
 (
-    ready_statfile="$GITPOD_REPO_ROOT/.gitpod/ready";
+    ready_statfile="/workspace/.gitpod/ready";
 
     until test -e "$ready_statfile"; do {
         sleep 1
