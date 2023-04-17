@@ -1,4 +1,4 @@
-#!/usr/bin/bash -eu;
+#!/usr/bin/bash -eu
 (
     ready_statfile="$GITPOD_REPO_ROOT/.gitpod/ready";
 
