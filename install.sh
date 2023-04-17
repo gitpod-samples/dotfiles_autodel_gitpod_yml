@@ -1,17 +1,10 @@
 #!/usr/bin/bash -eu;
 (
-    _file=".gitpod.yml";
-    _times=0;
-    _path="$GITPOD_REPO_ROOT/$_file";
+    ready_statfile="$GITPOD_REPO_ROOT/.gitpod/ready";
 
-    until test -e "$_path"; do {
-        if test "$_times" -eq 12; then {
-            exit;
-        } else {
-            sleep 1;
-            ((_times++)) || :;
-        } fi
+    until test -e "$ready_statfile"; do {
+        sleep 1
     } done
 
-    rm -f "$_path"
+    rm -f "$GITPOD_REPO_ROOT/.gitpod.yml"
 ) & disown
